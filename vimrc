@@ -11,11 +11,12 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 Plugin 'tpope/vim-fugitive'
+Plugin 'honza/vim-snippets'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
-Plugin 'honza/vim-snippets'
+Plugin 'ervandew/supertab'
 
 " end plugins/vundle
 call vundle#end()
@@ -33,6 +34,8 @@ set title
 set undofile
 set matchtime=2
 set laststatus=2
+
+let g:SuperTabDefaultCompletionType = "context"
 
 " file handling
 set autoread
