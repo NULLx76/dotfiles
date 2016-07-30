@@ -50,6 +50,10 @@ set undodir=~/.vim/undo
 set fileformat=unix
 set fileformats=unix,dos,mac
 
+" Paste toggle, if we paste in from a different application paste mode
+" prevents White spaces
+set pastetoggle=<F7>
+
 " Formatting
 set autoindent
 set expandtab
