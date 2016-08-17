@@ -71,3 +71,7 @@ set background=dark
 colorscheme solarized
 let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
+
+hi Normal ctermbg=none
+
+
