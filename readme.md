@@ -1,5 +1,5 @@
 # victorheld's dotfiles
-![screenshot](http://i.imgur.com/U2F41Mq.jpg)
+![screenshot](https://i.imgur.com/U2F41Mq.jpg)
 
 ## Dotfiles for:
 
