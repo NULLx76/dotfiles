@@ -23,8 +23,8 @@ set $mod Mod4
 hide_edge_borders both
 new_window none
 smart_borders on
-gaps inner 15
-gaps outer 8
+gaps inner 10
+gaps outer 1
 
 font pango:DejaVu Sans Mono
 
