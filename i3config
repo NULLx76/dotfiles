@@ -23,7 +23,7 @@ set $mod Mod4
 hide_edge_borders both
 new_window none
 smart_borders on
-gaps inner 15 
+gaps inner 15
 gaps outer 8
 
 font pango:DejaVu Sans Mono
@@ -39,7 +39,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 485 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "Dejva Sans Mono 18" 
+#bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 485 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "Dejva Sans Mono 18"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -140,26 +140,26 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode ""{
-        # These bindings trigger as soon as you enter the resize mode
+# These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+# Pressing left will shrink the window’s width.
+# Pressing right will grow the window’s width.
+# Pressing up will shrink the window’s height.
+# Pressing down will grow the window’s height.
+bindsym j resize shrink width 10 px or 10 ppt
+bindsym k resize grow height 10 px or 10 ppt
+bindsym l resize shrink height 10 px or 10 ppt
+bindsym semicolon resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+# same bindings, but for the arrow keys
+bindsym Left resize shrink width 10 px or 10 ppt
+bindsym Down resize grow height 10 px or 10 ppt
+bindsym Up resize shrink height 10 px or 10 ppt
+bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+# back to normal: Enter or Escape
+bindsym Return mode "default"
+bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode ""
@@ -184,7 +184,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # My own keybindings
 bindsym $mod+f exec firefox
-bindsym $mod+l exec i3lock-fancy -f DejaVu-Sans 
+bindsym $mod+l exec lock
 
 # Floating
 for_window [class="Lxappearance"] floating enable
@@ -201,23 +201,23 @@ client.urgent           $base02 $base08    $base00 $base0F
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        font pango:DejaVu Sans Mono, Font Awesome 8
+    font pango:DejaVu Sans Mono, Font Awesome 8
         strip_workspace_numbers yes
-        #status_command i3status
-		status_command i3blocks
+#status_command i3status
+        status_command i3blocks
         position bottom
-		height 25        
-        
-		colors {
-      	separator $base03
-      	background $base01
-      	statusline $base05
+        height 25
+
+        colors {
+            separator $base03
+                background $base01
+                statusline $base05
 #       	               border  background text
-      	focused_workspace  $base01 $base01    $base07
-      	active_workspace   $base01 $base02    $base03
-      	inactive_workspace $base01 $base01    $base03
-      	urgent_workspace   $base01 $base01    $base08
-	}
+                focused_workspace  $base01 $base01    $base07
+                active_workspace   $base01 $base02    $base03
+                inactive_workspace $base01 $base01    $base03
+                urgent_workspace   $base01 $base01    $base08
+        }
 }
 
 # Startup programs
@@ -229,6 +229,4 @@ exec --no-startup-id i3-msg 'workspace $ws1; exec gnome-terminal'
 exec i3-msg 'workspace $ws2; exec firefox'
 exec --no-startup-id i3-msg 'workspace $ws10; exec owncloud'
 
-exec_always feh --recursive --randomize --bg-fill ~/ownCloud/Pictures/Wallpapers/* 
-
-exec i3-msg 'workspace $ws1'
+exec_always feh --recursive --randomize --bg-fill ~/ownCloud/Pictures/Wallpapers/*
