@@ -3,6 +3,7 @@ alias q="exit"
 alias pingg="ping -c 3 8.8.8.8"
 alias mkdir="mkdir -pv"
 alias wget="wget -c"
+alias suspend="systemctl suspend"
 
 # Config
 alias zshrc="vim ~/.zshrc && source ~/.zshrc"
