@@ -5,10 +5,15 @@ alias mkdir="mkdir -pv"
 alias wget="wget -c"
 alias suspend="systemctl suspend"
 
+if hash hub 2>/dev/null; then
+    alias hub="git"
+fi
+
 # Config
 alias zshrc="vim ~/.zshrc && source ~/.zshrc"
 alias i3conf="vim ~/.config/i3/config && i3-msg restart"
 alias i3blocks="vim ~/.i3blocks.conf && i3-msg restart"
+alias vimrc="vim ~/.vimrc"
 
 # Extract - Auto extract common file formats
 function extract {
