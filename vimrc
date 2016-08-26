@@ -16,8 +16,10 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
-Plugin 'ervandew/supertab'
-Plugin 'racer-rust/vim-racer'
+"Plugin 'Valloric/YouCompleteMe'
+
+"Plugin 'ervandew/supertab'
+"Plugin 'racer-rust/vim-racer'
 
 " end plugins/vundle
 call vundle#end()
@@ -37,11 +39,7 @@ set matchtime=2
 set laststatus=2
 
 " Completion
-let g:SuperTabDefaultCompletionType = "context"
-
-set hidden
-let g:racer_cmd = "~/.cargo/bin/racer"
-let $RUST_SRC_PATH="/usr/local/src/rust/src/"
+let g:ycm_rust_src_path = '/usr/local/src/rust'
 
 " file handling
 set autoread
