@@ -16,10 +16,9 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-surround'
-"Plugin 'Valloric/YouCompleteMe'
 
-"Plugin 'ervandew/supertab'
-"Plugin 'racer-rust/vim-racer'
+" YCM is installed via an AUR pkg
+"Plugin 'Valloric/YouCompleteMe'
 
 " end plugins/vundle
 call vundle#end()
@@ -38,7 +37,7 @@ set undofile
 set matchtime=2
 set laststatus=2
 
-" Completion
+" YCM racer compatability (point to src location of rustc)
 let g:ycm_rust_src_path = '/usr/local/src/rust'
 
 " file handling
@@ -50,18 +49,18 @@ set noswapfile
 set tags=./.tags;/
 set viminfo="NONE"
 set backup
-set backupdir=~/.vim/backup
-set directory=~/.vim/tmp
+set backupdir=~/.vim/backup " Make sure these dirs are created prior
+set undodir=~/.vim/undo     " .
+set directory=~/.vim/tmp    " .
 set autochdir
-set undodir=~/.vim/undo
 set fileformat=unix
 set fileformats=unix,dos,mac
 
 " Paste toggle, if we paste in from a different application paste mode
-" prevents White spaces
+" prevents White spaces/auto comment etc.
 set pastetoggle=<F7>
 
-" Formatting
+" Formatting, tabs=4 spaces
 set autoindent
 set expandtab
 set shiftwidth=4
