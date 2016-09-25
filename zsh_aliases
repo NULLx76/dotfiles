@@ -5,8 +5,15 @@ alias mkdir="mkdir -pv"
 alias wget="wget -c"
 alias suspend="systemctl suspend"
 
+# Detect if hub is installed and alias accordingly
 if hash hub 2>/dev/null; then
     alias hub="git"
+fi
+
+# Check for apt and alias accordingly
+if hash apt 2>/dev/null; then
+    alias update="sudo apt update"
+    alias upgrade="sudo apt upgrade"
 fi
 
 # Config
