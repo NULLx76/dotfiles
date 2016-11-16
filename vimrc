@@ -28,7 +28,7 @@ filetype plugin indent on
 syntax enable
 set shell=/bin/zsh
 set number
-set mouse=a
+"set mouse=a
 set cursorline
 set ignorecase
 set smartcase
