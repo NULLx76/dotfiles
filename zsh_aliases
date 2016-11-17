@@ -16,6 +16,16 @@ if hash apt 2>/dev/null; then
     alias upgrade="sudo apt upgrade"
 fi
 
+mkcd () {
+  case "$1" in
+    /*) mkdir -p "$1" && cd "$1";;
+    */../*) (cd "./${1%/../*}/.." && mkdir -p "./${1##*/../}") && cd "$1";;
+    ../*) (cd .. && mkdir -p "${1#.}") && cd "$1";;
+    *) mkdir -p "./$1" && cd "./$1";;
+  esac
+}
+
+
 # Config
 alias zshrc="vim ~/.zshrc && source ~/.zshrc"
 alias i3conf="vim ~/.config/i3/config && i3-msg restart"
