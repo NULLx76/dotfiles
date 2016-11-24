@@ -36,6 +36,7 @@ set title
 set undofile
 set matchtime=2
 set laststatus=2
+set visualbell
 
 " YCM racer compatability (point to src location of rustc)
 let g:ycm_rust_src_path = '/usr/local/src/rust'
