@@ -234,4 +234,4 @@ exec i3-msg 'workspace $ws2; exec firefox'
 exec --no-startup-id i3-msg 'workspace $ws10; exec owncloud'
 exec i3-msg 'workspace $ws1'
 
-exec_always feh --recursive --randomize --bg-fill ~/ownCloud/Pictures/Wallpapers/*
+exec_always feh --recursive --randomize --bg-fill ~/Nextcloud/Pictures/Wallpapers/*
