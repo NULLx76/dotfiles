@@ -207,7 +207,7 @@ client.urgent           $base02 $base08    $base00 $base0F
 bar {
     font pango:DejaVu Sans Mono, Font Awesome 8
         strip_workspace_numbers yes
-#status_command i3status
+        #status_command i3status
         status_command i3blocks
         position bottom
         height 25
@@ -232,5 +232,6 @@ exec thunar --daemon
 exec --no-startup-id i3-msg 'workspace $ws1; exec gnome-terminal'
 exec i3-msg 'workspace $ws2; exec firefox'
 exec --no-startup-id i3-msg 'workspace $ws10; exec owncloud'
+exec i3-msg 'workspace $ws1'
 
 exec_always feh --recursive --randomize --bg-fill ~/ownCloud/Pictures/Wallpapers/*
