@@ -1,5 +1,9 @@
-# Solarized dark color scheme
+[options]
+font = Font Awesome
+font = DejaVu Sans Mono for Powerline 12
 
+
+# Solarized color scheme
 [colors]
 foreground = #839496
 foreground_bold = #eee8d5
