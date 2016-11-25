@@ -225,13 +225,13 @@ bar {
 }
 
 # Startup programs
-exec --no-startup-id nm-applet
-exec compton -b
-exec thunar --daemon
+exec --no-startup-id nm-applet # Networkmanager Applet
+exec compton -b # Compositor for effects and transparency
+exec thunar --daemon # File manager deamon (for auto-mounting drives)
+exec nextcloud # Cloud sync client
 
 exec --no-startup-id i3-msg 'workspace $ws1; exec gnome-terminal'
 exec i3-msg 'workspace $ws2; exec firefox'
-exec --no-startup-id i3-msg 'workspace $ws10; exec nextloud'
-#exec --no-startup-id i3-msg 'workspace $ws10; exec owncloud'
 
+# Sets a random background from my cloud-synced pictures folder
 exec_always feh --recursive --randomize --bg-fill ~/Nextcloud/Pictures/Wallpapers/*
