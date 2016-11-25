@@ -213,10 +213,10 @@ bar {
         height 25
 
         colors {
-            separator $base03
+                separator $base03
                 background $base01
                 statusline $base05
-#       	               border  background text
+#       	                       border  background text
                 focused_workspace  $base01 $base01    $base07
                 active_workspace   $base01 $base02    $base03
                 inactive_workspace $base01 $base01    $base03
@@ -231,9 +231,7 @@ exec thunar --daemon
 
 exec --no-startup-id i3-msg 'workspace $ws1; exec gnome-terminal'
 exec i3-msg 'workspace $ws2; exec firefox'
-#exec --no-startup-id i3-msg 'workspace $ws10; exec nextloud'
-exec --no-startup-id i3-msg 'workspace $ws10; exec owncloud'
-
-
+exec --no-startup-id i3-msg 'workspace $ws10; exec nextloud'
+#exec --no-startup-id i3-msg 'workspace $ws10; exec owncloud'
 
 exec_always feh --recursive --randomize --bg-fill ~/Nextcloud/Pictures/Wallpapers/*
