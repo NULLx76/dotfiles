@@ -230,7 +230,7 @@ exec compton -b # Compositor for effects and transparency
 exec thunar --daemon # File manager deamon (for auto-mounting drives)
 exec nextcloud # Cloud sync client
 
-exec --no-startup-id i3-msg 'workspace $ws1; exec gnome-terminal'
+exec --no-startup-id i3-msg 'workspace $ws1; exec termite'
 exec i3-msg 'workspace $ws2; exec firefox'
 
 # Sets a random background from my cloud-synced pictures folder
