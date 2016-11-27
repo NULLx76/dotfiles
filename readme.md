@@ -5,6 +5,7 @@
 
 * i3
 * i3blocks
+* dmenu
+* termite
 * vim
 * zsh
-* dmenu
