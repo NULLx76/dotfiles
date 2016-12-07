@@ -2,7 +2,9 @@
 cache=~/.cache/dmenu_run
 freq=~/.dmenu_history
 aliases=~/.zsh_aliases
+zshrc=~/.zshrc 
 source $aliases
+source $zshrc
 
 case "$1" in 
     remove)
