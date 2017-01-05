@@ -6,6 +6,9 @@ alias wget="wget -c"
 alias suspend="systemctl suspend"
 alias hibernate="systemctl hibernate"
 
+#TODO: Check if on local network
+alias xproxy="ssh -f -N xirion.net -D 5151"
+
 # Detect if hub is installed and alias accordingly
 if hash hub 2>/dev/null; then
     alias hub="git"
