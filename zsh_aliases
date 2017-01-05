@@ -18,7 +18,7 @@ fi
 if hash apt 2>/dev/null; then
     alias update="sudo apt update"
     alias upgrade="sudo apt upgrade"
-else hash pacman 2>/dev/null; then
+elif hash pacman 2>/dev/null; then
     alias update="pacaur -Sy"
     alias upgrade="pacaur -Syu" # Note: is acctually update + upgrade
 fi
