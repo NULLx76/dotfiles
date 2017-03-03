@@ -36,6 +36,7 @@ mkcd () {
   esac
 }
 
+# Like sleep but with status
 function countdown(){
    date1=$((`date +%s` + $1)); 
    while [ "$date1" -ge `date +%s` ]; do 
@@ -43,6 +44,9 @@ function countdown(){
      sleep 0.1
    done
 }
+
+# Just a stopwatch
+
 function stopwatch(){
   date1=`date +%s`; 
    while true; do 
@@ -51,6 +55,14 @@ function stopwatch(){
    done
 }
 
+# Simple calculation script with bc
+# Replaces p with + and x with *
+# Standard 10 number precision (scale=10)
+=() {
+    calc="${@//p/+}"
+    calc="${calc//x/*}"
+    bc -l <<<"scale=10;$calc"
+}
 
 # Config
 alias zshrc="vim ~/.zshrc && source ~/.zshrc"
