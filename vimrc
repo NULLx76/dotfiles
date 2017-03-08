@@ -40,6 +40,7 @@ set visualbell
 
 " YCM racer compatability (point to src location of rustc)
 let g:ycm_rust_src_path = '/usr/local/src/rust'
+let g:ycm_server_python_interpreter = '/usr/bin/python2'
 
 " file handling
 set autoread
