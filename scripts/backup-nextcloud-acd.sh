@@ -9,17 +9,18 @@ mkdir $BACKUPDIR;
 cd $BACKUPDIR;
 
 # Copy Nextcloud Install dir
-rsync -Aax /var/www/nextcloud ./;
+sudo rsync -Aax /var/www/nextcloud ./;
 
 # Copy nextcloud data folder
 sudo rsync -Aa /lvm/nextcloud_data ./; 
 
 # Tar
 cd ../;
-tar -cvf $BACKUPDIR.tar ./$BACKUPDIR; # Maybe zip for faster upload? TODO: Need to test what is faster.
+sudo tar -zcvf $BACKUPDIR.tar.gz ./$BACKUPDIR; # Maybe zip for faster upload? TODO: Need to test what is faster.
+sudo chown victor:victor $BACKUPDIR.tar.gz
 
 # Rclone upload
-rclone copy $BACKUPDIR.tar ACD_Encrypted:/nextcloud_backups/;
+rclone copy $BACKUPDIR.tar.gz ACD_Encrypted:/nextcloud_backups/;
 
 # Remove tmp files
-sudo rm -rf $BACKUPDIR $BACKUPDIR.tar;
+sudo rm -rf $BACKUPDIR $BACKUPDIR.tar.gz;
